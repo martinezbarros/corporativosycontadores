@@ -27,7 +27,7 @@ const Home: React.FC = () => {
               Soluciones legales y contables para empresas y particulares.  
               Especialistas en derecho corporativo, fiscalidad internacional y consultoría financiera.
             </p>
-            <div className="flex flex-col sm:flex-row justify-center gap-4">
+            <div className="flex flex-col sm:flex-row justify-center gap-8 md:gap-4">
               <AnimatedButton>
                 <Link
                   href="/servicios"
