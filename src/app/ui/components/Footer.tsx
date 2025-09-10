@@ -32,10 +32,10 @@ const Footer: React.FC = () => {
           <div>
             <h3 className="text-xl font-bold mb-4 text-[#BE9A42]">Contacto</h3>
             <address className="not-italic text-gray-300">
-              <p>PH Plaza 2000, frente a Plaza New York</p>
+              <p>Oceanía Business Plaza, Torre 1000, C. Isaac Hanono Missri, Panamá</p>
               <p>Panamá</p>
               <p>Tel: (+507) 6613-4375</p>
-              <p>Email: bufete.letradosyarquitectos@gmail.com</p>
+              <p>Email: abogadosprotecciondeactivos@gmail.com</p>
             </address>
           </div>
           <div className="flex space-x-4">
