@@ -1,9 +1,9 @@
 // app/galeria/page.tsx
 import React from 'react';
 import { Metadata } from 'next';
-import EnviraGallery from '../ui/components/Gallery';
-import { getSiteInfo } from '../lib/wordpress';
-import HeroSection from '../ui/components/HeroSection';
+import EnviraGallery from '../../ui/components/Gallery';
+import { getSiteInfo } from '../../lib/wordpress';
+import HeroSection from '../../ui/components/HeroSection';
 
 import * as motion from "motion/react-client";
 
@@ -11,7 +11,8 @@ import * as motion from "motion/react-client";
 const siteInfo = await getSiteInfo();
 export const metadata: Metadata = {
   title: `Galería - ${siteInfo.name}`,
-  description: 'Explora nuestra galería de imágenes y proyectos realizados',
+  description: 'Galería del Bufete de Abogados Corporativos y Contadores: Instalaciones, equipo multidisciplinario y participación en eventos empresariales y fiscales.',
+  keywords: ["instalaciones bufete", "equipo abogados contadores", "eventos empresariales", "seminarios fiscales", "galería corporativa", "imágenes oficinas"]
 };
 
 // Obtener todas las galerías de Envira

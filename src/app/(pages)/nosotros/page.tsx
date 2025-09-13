@@ -5,12 +5,16 @@ import Link from 'next/link';
 import { Metadata } from 'next';
 
 import * as motion from "motion/react-client";
-import HeroSection from '../ui/components/HeroSection';
-import AnimatedButton from '../ui/motion/AnimatedButton';
+import HeroSection from '../../ui/components/HeroSection';
+import AnimatedButton from '../../ui/motion/AnimatedButton';
+import { getSiteInfo } from '@/app/lib/wordpress';
+
+const siteInfo = await getSiteInfo();
 
 export const metadata: Metadata = {
-  title: 'Nuestra Firma - Soluciones Legales y Contables Integradas',
-  description: 'Bufete especializado en derecho corporativo y servicios contables para empresas. Ofrecemos asesoría integral que combina expertise legal y financiero para optimizar su negocio.',
+  title: `Nosotros - ${siteInfo.name}`,
+  description: 'Bufete de Abogados Corporativos y Contadores: Equipo multidisciplinario de abogados y contadores con especialización en derecho empresarial y fiscal.',
+  keywords: ["nuestro bufete", "equipo multidisciplinario", "abogados contadores", "experiencia empresarial", "valores firma", "enfoque integral"]
 };
 
 export default function Nosotros() {
@@ -23,7 +27,7 @@ export default function Nosotros() {
         <section className="py-16 bg-white">
           <div className="container mx-auto px-4">
             <div className="flex flex-col lg:flex-row items-center gap-12">
-              <div className="lg:w-1/2">
+              <div className="hidden md:block lg:w-1/2">
                 <div className="relative h-96 w-full rounded-xl overflow-hidden">
                   <Image
                     src="https://bakerandalvarez.site/bufetedeabogadoscorporativosycontadores/wp-content/uploads/sites/4/2025/09/our-team-corporativo-scaled.jpg"

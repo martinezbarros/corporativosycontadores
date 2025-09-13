@@ -3,17 +3,18 @@ import React from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
 import { Metadata } from 'next';
-import Pagination from '../ui/components/Paginacion';
-import { getPosts, getCategories, getSiteInfo } from '../lib/wordpress';
-import { WPPost } from '../interfaces/wordpressApi';
-import HeroSection from '../ui/components/HeroSection';
+import Pagination from '../../ui/components/Paginacion';
+import { getPosts, getCategories, getSiteInfo } from '../../lib/wordpress';
+import { WPPost } from '../../interfaces/wordpressApi';
+import HeroSection from '../../ui/components/HeroSection';
 
 import * as motion from "motion/react-client";
 
 const siteInfo = await getSiteInfo();
 export const metadata: Metadata = {
   title: `Blog - ${siteInfo.name}`,
-  description: 'Artículos sobre desarrollo web, diseño y marketing digital',
+  description: 'Blog corporativo y fiscal: Artículos sobre derecho empresarial, novedades fiscales, compliance, gestión contable y asesoría integral para empresas.',
+  keywords: ["artículos fiscales", "derecho corporativo", "novedades compliance", "gestión contable", "actualidad empresarial", "blog integral"]
 };
 
 export default async function Blog(props: { searchParams?: Promise<{ page?: string }> }) {

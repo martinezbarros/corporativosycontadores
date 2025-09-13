@@ -3,7 +3,16 @@
 import Link from 'next/link';
 import { motion } from 'motion/react';
 import AnimatedButton from './ui/motion/AnimatedButton';
+import { getSiteInfo } from './lib/wordpress';
+import { Metadata } from 'next';
 
+const siteInfo = await getSiteInfo();
+
+export const metadata: Metadata = {
+  title: `Inicio - ${siteInfo.name}`,
+  description: 'Bufete de Abogados Corporativos y Contadores: Servicios integrales legales y contables para empresas. Asesoría fiscal, corporativa y compliance en un mismo lugar.',
+  keywords: ["abogados contadores", "asesoría fiscal", "derecho corporativo", "compliance", "servicios integrales", "consultoría empresarial"]
+};
 const Home: React.FC = () => {
   return (
     <>
